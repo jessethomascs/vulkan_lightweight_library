@@ -1,0 +1,5 @@
+# We don't want to pull the build area with us to source control
+build/
+
+# We don't care for user's vscode settings here
+.vscode/
