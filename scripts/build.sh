@@ -6,7 +6,7 @@ echo "Removing artifacts first..."
 rm -rf *.gch > /dev/null # Remove artifacts first if applicable and pipe output to the abyss
 
 echo "Running G++ compiler command..."
-g++ -I../hdr ../hdr/*.h ../src/*.cpp -o ../build/application # build all our .cpp and .h files
+g++ -I../hdr ../hdr/*.h ../src/*.cpp -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi -o ../build/application # build all our .cpp and .h files
 
 echo "Giving execution privileges to compiled file..."
 chmod +x ../build/application # Give our build script execution privileges
