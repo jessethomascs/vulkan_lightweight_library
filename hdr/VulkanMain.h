@@ -15,7 +15,7 @@ const uint32_t HEIGHT = 600;
 
 const std::vector<const char*> validationLayers = 
 {
-    "VK_LAYER_KHRONOS_VALIDATION"
+    "VK_LAYER_KHRONOS_validation"
 };
 
 #ifdef NDEBUG//preprocces debuggermode essentially NDEBUG is a macro part of c++ standerd for "notdebug" 
@@ -29,7 +29,7 @@ public:
     void Run();
 
 private:
-    GLFWwindow* window;
+    GLFWwindow* window = nullptr;
     VkInstance instance;
 
     void initWindow();
